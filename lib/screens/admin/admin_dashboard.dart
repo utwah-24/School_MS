@@ -138,7 +138,7 @@ class _AdminDashboardState extends State<AdminDashboard>
                   ),
                   const SizedBox(width: 16),
                   Text(
-                    'School Management System',
+                    'Shule Kingajani',
                     style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),

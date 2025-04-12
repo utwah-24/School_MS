@@ -72,15 +72,26 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Theme.of(context).colorScheme.primary.withOpacity(0.1),
-              Theme.of(context).colorScheme.secondary.withOpacity(0.1),
-            ],
+          image: DecorationImage(
+            image: const AssetImage('assets/images/login_bg.jpg',
+
+            ),
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.5),
+              BlendMode.darken,
+            ),
           ),
+          // gradient: LinearGradient(
+          //   begin: Alignment.topLeft,
+          //   end: Alignment.bottomRight,
+          //   // colors: [
+          //   //   Theme.of(context).colorScheme.primary.withOpacity(0.1),
+          //   //   Theme.of(context).colorScheme.secondary.withOpacity(0.1),
+          //   // ],
+          // ),
         ),
         child: Center(
           child: SingleChildScrollView(
@@ -118,7 +129,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text(
                     'Welcome back! Please login to your account',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: Colors.grey[600],
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400
                         ),
                     textAlign: TextAlign.center,
                   ),
